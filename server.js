@@ -4,7 +4,7 @@ const axios = require("axios");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const API_KEY = "YOUR_API_KEY_HERE";
+const API_KEY = "3ENE93KBLLUP8KLE";
 
 app.get("/", (req, res) => {
   res.send("AI PMS Backend Running");
@@ -26,4 +26,4 @@ app.get("/stock/:symbol", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  const API_KEY = "3ENE93KBLLUP8KLE";
+  
