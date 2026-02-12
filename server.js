@@ -17,7 +17,6 @@ app.get("/stock/:symbol", async (req, res) => {
     const response = await axios.get(
       `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}.BSE&apikey=${API_KEY}`
     );
-
     res.json(response.data);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch stock data" });
@@ -26,4 +25,4 @@ app.get("/stock/:symbol", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  
+});
